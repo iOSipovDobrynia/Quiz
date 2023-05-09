@@ -56,15 +56,47 @@
 		E3C077D32A08280F00DD5881 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				E3C077D42A08280F00DD5881 /* AppDelegate.swift */,
-				E3C077D62A08280F00DD5881 /* SceneDelegate.swift */,
-				E3C077D82A08280F00DD5881 /* ViewController.swift */,
-				E3C077DA2A08280F00DD5881 /* Main.storyboard */,
+				E3C077E92A0A5F4C00DD5881 /* ViewControllers */,
+				E3C077EC2A0A5FC200DD5881 /* Models */,
+				E3C077E82A0A5ECC00DD5881 /* App */,
+				E3C077EA2A0A5F6700DD5881 /* Storyboards */,
 				E3C077DD2A08281100DD5881 /* Assets.xcassets */,
-				E3C077DF2A08281100DD5881 /* LaunchScreen.storyboard */,
-				E3C077E22A08281100DD5881 /* Info.plist */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		E3C077E82A0A5ECC00DD5881 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E3C077D42A08280F00DD5881 /* AppDelegate.swift */,
+				E3C077D62A08280F00DD5881 /* SceneDelegate.swift */,
+				E3C077E22A08281100DD5881 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E3C077E92A0A5F4C00DD5881 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3C077D82A08280F00DD5881 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3C077EA2A0A5F6700DD5881 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E3C077DA2A08280F00DD5881 /* Main.storyboard */,
+				E3C077DF2A08281100DD5881 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E3C077EC2A0A5FC200DD5881 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = Quiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = Quiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
