@@ -34,7 +34,12 @@ class QuestionsViewController: UIViewController {
     }
     
     //MARK: IBActions
-
+    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func multipleAnswerButtonPressed() {
+    }
+    @IBAction func rangedAnswerButtonPressed() {
+    }
 }
 
 ////MARK: Private Methods
