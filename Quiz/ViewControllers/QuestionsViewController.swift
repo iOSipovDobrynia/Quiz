@@ -13,6 +13,16 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var singleStackView: UIStackView!
+    @IBOutlet var singleButtons: [UIButton]!
+    
+    @IBOutlet var multipleStackView: UIStackView!
+    @IBOutlet var multipleLabels: [UILabel]!
+    @IBOutlet var multipleSwitches: [UISwitch]!
+    
+    @IBOutlet var rangedStackView: UIStackView!
+    @IBOutlet var rangedProgress: UIProgressView!
+    @IBOutlet var rangedLabels: [UILabel]!
+    
     //MARK: private properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0

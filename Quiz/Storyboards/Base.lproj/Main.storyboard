@@ -249,9 +249,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleStackView" destination="xkj-kG-fk2" id="IjO-8Q-Ae9"/>
                         <outlet property="questionLabel" destination="NIr-QG-Lc3" id="jGH-Nn-3ga"/>
                         <outlet property="questionProgressView" destination="CNp-0e-fNO" id="rne-pm-4Y6"/>
+                        <outlet property="rangedProgress" destination="OgT-dO-FW6" id="xxd-ez-E5I"/>
+                        <outlet property="rangedStackView" destination="Zrn-Gf-DGT" id="tS0-hX-uge"/>
                         <outlet property="singleStackView" destination="D28-AY-HK5" id="i1d-Ty-5Le"/>
+                        <outletCollection property="singleButtons" destination="L6O-V5-adY" collectionClass="NSMutableArray" id="lop-CS-zbq"/>
+                        <outletCollection property="singleButtons" destination="0Ye-Tl-u5a" collectionClass="NSMutableArray" id="Nul-Fr-xAi"/>
+                        <outletCollection property="singleButtons" destination="Yx1-BF-fOc" collectionClass="NSMutableArray" id="96x-pH-ObS"/>
+                        <outletCollection property="singleButtons" destination="Gtd-aG-hkU" collectionClass="NSMutableArray" id="V2N-fh-gW6"/>
+                        <outletCollection property="multipleLabels" destination="fRE-cW-xJX" collectionClass="NSMutableArray" id="POJ-2i-7Bf"/>
+                        <outletCollection property="multipleLabels" destination="5Ia-8M-pJa" collectionClass="NSMutableArray" id="Yvr-Cb-ZGb"/>
+                        <outletCollection property="multipleLabels" destination="tHF-3t-2Bz" collectionClass="NSMutableArray" id="76c-vk-B0x"/>
+                        <outletCollection property="multipleLabels" destination="R0P-bm-6rx" collectionClass="NSMutableArray" id="2On-j2-dgz"/>
+                        <outletCollection property="multipleSwitches" destination="Tlh-8Y-69O" collectionClass="NSMutableArray" id="MRt-x2-rYg"/>
+                        <outletCollection property="multipleSwitches" destination="dd2-Zo-24r" collectionClass="NSMutableArray" id="tlf-4a-4s8"/>
+                        <outletCollection property="multipleSwitches" destination="wOf-79-7we" collectionClass="NSMutableArray" id="42a-hD-Cd4"/>
+                        <outletCollection property="multipleSwitches" destination="3cs-5O-GDk" collectionClass="NSMutableArray" id="2cU-Dq-rw5"/>
+                        <outletCollection property="rangedLabels" destination="kdT-Fa-xEJ" collectionClass="NSMutableArray" id="gCu-uo-lcH"/>
+                        <outletCollection property="rangedLabels" destination="bai-MZ-EAQ" collectionClass="NSMutableArray" id="Bnx-Qf-YPf"/>
                         <segue destination="V9W-KE-O1a" kind="show" identifier="showResult" id="NM9-3r-42a"/>
                     </connections>
                 </viewController>
