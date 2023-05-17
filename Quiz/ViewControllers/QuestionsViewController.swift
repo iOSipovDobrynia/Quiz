@@ -30,7 +30,7 @@ class QuestionsViewController: UIViewController {
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-//        updateUI()
+        updateUI()
     }
     
     //MARK: IBActions
@@ -42,15 +42,20 @@ class QuestionsViewController: UIViewController {
     }
 }
 
-////MARK: Private Methods
-//extension QuestionsViewController {
-//    private func updateUI() {
-//        for stackView in [singleStackView, multipleStackView, rangedStackView] {
-//            stackView?.isHidden = true
-//        }
-//
-//        let currentQuestion = questions[questionIndex]
-//
-//        questionLabel.text = currentQuestion.title
-//    }
-//}
+//MARK: Private Methods
+extension QuestionsViewController {
+    private func updateUI() {
+        for stackView in [singleStackView, multipleStackView, rangedStackView] {
+            stackView?.isHidden = true
+        }
+
+        let currentQuestion = questions[questionIndex]
+
+        questionLabel.text = currentQuestion.title
+        
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        questionProgressView.setProgress(totalProgress, animated: true)
+        
+        title = "Вщпрос № \(questionIndex + 1) из \(questions.count)"
+    }
+}
