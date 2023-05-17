@@ -9,7 +9,10 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     //MARK: IBOutlets
+    @IBOutlet var questionProgressView: UIProgressView!
+    @IBOutlet var questionLabel: UILabel!
     
+    @IBOutlet var singleStackView: UIStackView!
     //MARK: private properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0

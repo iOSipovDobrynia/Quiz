@@ -86,7 +86,7 @@
         <!--Вопрос №-->
         <scene sceneID="MCE-2L-rw9">
             <objects>
-                <viewController id="ibP-dG-PgT" customClass="QuestionsViewController" sceneMemberID="viewController">
+                <viewController id="ibP-dG-PgT" customClass="QuestionsViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qk1-Rk-d3j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,6 +249,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="questionLabel" destination="NIr-QG-Lc3" id="jGH-Nn-3ga"/>
+                        <outlet property="questionProgressView" destination="CNp-0e-fNO" id="rne-pm-4Y6"/>
+                        <outlet property="singleStackView" destination="D28-AY-HK5" id="i1d-Ty-5Le"/>
                         <segue destination="V9W-KE-O1a" kind="show" identifier="showResult" id="NM9-3r-42a"/>
                     </connections>
                 </viewController>
