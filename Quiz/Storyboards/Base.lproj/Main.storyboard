@@ -259,13 +259,7 @@
                             <constraint firstItem="xkj-kG-fk2" firstAttribute="centerY" secondItem="Qk1-Rk-d3j" secondAttribute="centerY" id="uUw-P8-VeO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="0PZ-ev-nWP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="VHT-53-LSZ">
-                            <connections>
-                                <segue destination="V9W-KE-O1a" kind="show" id="K3B-CE-eck"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="0PZ-ev-nWP"/>
                     <connections>
                         <outlet property="multipleStackView" destination="xkj-kG-fk2" id="IjO-8Q-Ae9"/>
                         <outlet property="questionLabel" destination="NIr-QG-Lc3" id="jGH-Nn-3ga"/>
@@ -353,9 +347,6 @@
             <point key="canvasLocation" x="780" y="-2.112676056338028"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="K3B-CE-eck"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
