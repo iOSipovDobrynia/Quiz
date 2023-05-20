@@ -20,7 +20,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var multipleSwitches: [UISwitch]!
     
     @IBOutlet var rangedStackView: UIStackView!
-    @IBOutlet var rangedProgress: UIProgressView!
+    @IBOutlet var rangedSlider: UISlider!
     @IBOutlet var rangedLabels: [UILabel]!
     
     //MARK: private properties
@@ -55,6 +55,7 @@ class QuestionsViewController: UIViewController {
         nextQuestion()
     }
     @IBAction func rangedAnswerButtonPressed() {
+        nextQuestion()
     }
 }
 
@@ -84,7 +85,7 @@ extension QuestionsViewController {
         case .multiple:
             showMultipleStackView(with: currentAnswers)
         case .ranged:
-            break
+            showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -102,6 +103,14 @@ extension QuestionsViewController {
         for (label, answer) in zip(multipleLabels, answers) {
             label.text = answer.title
         }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden.toggle()
+        
+        rangedLabels.first?.text = answers.first?.title
+        rangedLabels.last?.text = answers.last?.title
+        
     }
     
     private func nextQuestion() {

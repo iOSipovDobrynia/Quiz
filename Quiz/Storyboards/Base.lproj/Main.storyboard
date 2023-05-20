@@ -198,13 +198,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Zrn-Gf-DGT">
-                                <rect key="frame" x="16" y="215.5" width="288" height="137"/>
+                                <rect key="frame" x="16" y="202.5" width="288" height="163"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OgT-dO-FW6">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
-                                    </progressView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="A16-vw-c07">
+                                        <rect key="frame" x="-2" y="0.0" width="292" height="31"/>
+                                    </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-b6-7d2">
-                                        <rect key="frame" x="0.0" y="43" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="288" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdT-Fa-xEJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="81.5" height="20.5"/>
@@ -221,7 +221,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-do-USD">
-                                        <rect key="frame" x="0.0" y="102.5" width="288" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="128.5" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
@@ -264,7 +264,7 @@
                         <outlet property="multipleStackView" destination="xkj-kG-fk2" id="IjO-8Q-Ae9"/>
                         <outlet property="questionLabel" destination="NIr-QG-Lc3" id="jGH-Nn-3ga"/>
                         <outlet property="questionProgressView" destination="CNp-0e-fNO" id="rne-pm-4Y6"/>
-                        <outlet property="rangedProgress" destination="OgT-dO-FW6" id="xxd-ez-E5I"/>
+                        <outlet property="rangedSlider" destination="A16-vw-c07" id="CoC-E0-abA"/>
                         <outlet property="rangedStackView" destination="Zrn-Gf-DGT" id="tS0-hX-uge"/>
                         <outlet property="singleStackView" destination="D28-AY-HK5" id="i1d-Ty-5Le"/>
                         <outletCollection property="singleButtons" destination="L6O-V5-adY" collectionClass="NSMutableArray" id="lop-CS-zbq"/>
