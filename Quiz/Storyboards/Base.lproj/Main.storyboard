@@ -322,7 +322,13 @@
                             <constraint firstItem="e2f-wU-XHR" firstAttribute="leading" secondItem="oIc-Ls-TB0" secondAttribute="leading" constant="16" id="xJp-fE-wX6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="QWD-hH-QXc"/>
+                    <navigationItem key="navigationItem" title="Результат" id="QWD-hH-QXc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Al7-si-juu">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="V9W-KE-O1a" id="l6N-MZ-ObK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CaR-2P-1uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

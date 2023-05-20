@@ -11,5 +11,10 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        navigationController?.dismiss(animated: true)
     }
 }
