@@ -25,7 +25,11 @@ class QuestionsViewController: UIViewController {
     
     //MARK: private properties
     private let questions = Question.getQuestions()
+    private var answersChosen: [Answer] = []
     private var questionIndex = 0
+    private var currentAnswers: [Answer] {
+        questions[questionIndex].answers
+    }
     
     //MARK: UIViewController
     override func viewDidLoad() {
@@ -35,6 +39,11 @@ class QuestionsViewController: UIViewController {
     
     //MARK: IBActions
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[buttonIndex]
+        answersChosen.append(currentAnswer)
+        
+        nextQuestion()
     }
     @IBAction func multipleAnswerButtonPressed() {
     }
@@ -57,5 +66,26 @@ extension QuestionsViewController {
         questionProgressView.setProgress(totalProgress, animated: true)
         
         title = "Вщпрос № \(questionIndex + 1) из \(questions.count)"
+        
+        showCurrentAnswers(for: currentQuestion.responseType)
+    }
+    
+    private func showCurrentAnswers(for type: ResponseType) {
+        switch type {
+        case .single:
+            showSingleStackView(with: currentAnswers )
+        case .multiple:
+            break
+        case .ranged:
+            break
+        }
+    }
+    
+    private func showSingleStackView(with answers: [Answer]) {
+        singleStackView.isHidden.toggle()
+        
+        for (button, answer) in zip(singleButtons, answers) {
+            button.setTitle(answer.title, for: .normal)
+        }
     }
 }
