@@ -66,13 +66,13 @@ enum Animal: Character {
     var definition: String {
         switch self {
         case .dog:
-            return "ДОг"
+            return "Собака – друг человека"
         case .rabbit:
-            return "кролик"
+            return "Кролик — это символ изобилия, счастья, долгой радостной жизни."
         case .cat:
-            return "кот"
+            return "Коты символизируют хитроумие, внимательность, чувственную красоту"
         case .tortoise:
-            return "черепашка"
+            return "Черепаха олицетворяет постоянство, время, мудрость и силу."
         }
     }
 }

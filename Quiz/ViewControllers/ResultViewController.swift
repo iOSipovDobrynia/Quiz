@@ -11,16 +11,16 @@ class ResultViewController: UIViewController {
     //MARK: properties
     var answers: [Answer] = []
     @IBOutlet var resultAnimalLabel: UILabel!
-    @IBOutlet var resultAnimalDefinition: UILabel!
+    @IBOutlet var resultAnimalDefinitionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        let resultAnimal = calculateCountAnimal(from: answers)
+        
+        let resultAnimal = calculateMostFrequentAnimal(from: answers)
         
         resultAnimalLabel.text = "Вы – \(resultAnimal.rawValue)"
-        
-        resultAnimalDefinition.text = resultAnimal.definition
+        resultAnimalDefinitionLabel.text = resultAnimal.definition
     }
     
     //MARK: IBActions
@@ -30,11 +30,19 @@ class ResultViewController: UIViewController {
 }
 
 extension ResultViewController {
-    private func calculateCountAnimal(from answers: [Answer]) -> Animal {
-        var result: Animal
+    private func calculateMostFrequentAnimal(from answers: [Answer]) -> Animal {
+        let animalCount = countAnimals(from: answers)
         
+        let sortedAnimalCount = animalCount.sorted { $0.value > $1.value }
+        
+        let result = sortedAnimalCount.first?.key ?? .cat
+    
+        return result
+    }
+    
+    private func countAnimals(from answers: [Answer]) -> [Animal: Int] {
         var animalCount: [Animal: Int] = [:]
-        
+
         for answer in answers {
             if let count = animalCount[answer.animal] {
                 animalCount[answer.animal] = count + 1
@@ -43,10 +51,6 @@ extension ResultViewController {
             }
         }
         
-        let sortedAnimalCount = animalCount.sorted { $0.value > $1.value }
-        
-        result = sortedAnimalCount.first?.key ?? .cat
-    
-        return result
+        return animalCount
     }
 }

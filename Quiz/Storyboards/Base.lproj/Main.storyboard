@@ -305,7 +305,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – бабочка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGs-Qa-iMy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – бабочка" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGs-Qa-iMy">
                                         <rect key="frame" x="54" y="109" width="180" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -330,7 +330,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="resultAnimalDefinition" destination="pGs-Qa-iMy" id="Wlz-NG-K68"/>
+                        <outlet property="resultAnimalDefinitionLabel" destination="pGs-Qa-iMy" id="Wlz-NG-K68"/>
                         <outlet property="resultAnimalLabel" destination="SfX-K6-lh9" id="tnI-a2-6ol"/>
                     </connections>
                 </viewController>
