@@ -19,8 +19,7 @@ class ResultViewController: UIViewController {
         
         let resultAnimal = calculateMostFrequentAnimal(from: answers)
         
-        resultAnimalLabel.text = "Вы – \(resultAnimal.rawValue)"
-        resultAnimalDefinitionLabel.text = resultAnimal.definition
+        setResult(resultAnimal: resultAnimal)
     }
     
     //MARK: IBActions
@@ -52,5 +51,10 @@ extension ResultViewController {
         }
         
         return animalCount
+    }
+    
+    private func setResult(resultAnimal: Animal) {
+        resultAnimalLabel.text = "Вы – \(resultAnimal.rawValue)"
+        resultAnimalDefinitionLabel.text = resultAnimal.definition
     }
 }
