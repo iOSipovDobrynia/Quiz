@@ -44,7 +44,7 @@ extension ResultViewController {
 
         for answer in answers {
             if let count = animalCount[answer.animal] {
-                animalCount[answer.animal] = count + 1
+                animalCount.updateValue(count + 1, forKey: answer.animal)
             } else {
                 animalCount[answer.animal] = 1
             }
